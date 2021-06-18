@@ -15,8 +15,8 @@ data "aws_iam_policy_document" "s3_policy_document" {
     ]
 
     resources = [
-      "arn:aws:s3:::angular-app-cc510f22",
-      "arn:aws:s3:::angular-app-cc510f22/*"
+      aws_s3_bucket.angularapps3.arn,
+      "${aws_s3_bucket.angularapps3.arn}/*"
     ]
   }
 
@@ -34,8 +34,8 @@ data "aws_iam_policy_document" "s3_policy_document" {
     ]
 
     resources = [
-      "arn:aws:s3:::angular-app-cc510f22",
-      "arn:aws:s3:::angular-app-cc510f22/*"
+      aws_s3_bucket.angularapps3.arn,
+      "${aws_s3_bucket.angularapps3.arn}/*"
     ]
   }
 }
