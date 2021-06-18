@@ -1,8 +1,3 @@
-provider "aws" {
-  region                  = var.aws_region
-  shared_credentials_file = var.scf_location
-}
-
 resource "aws_codepipeline" "applicationpipeline" {
   name     = "applicationpipeline"
   role_arn = aws_iam_role.codepipeline_role.arn
